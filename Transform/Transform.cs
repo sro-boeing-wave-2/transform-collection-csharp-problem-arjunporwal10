@@ -6,9 +6,17 @@ namespace Transform
 {
     public static class Transform 
     {
-        public static void Map()
+        public static T[] Map<T>(this int[] numberArray, Func<int , T> property)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            T[] myArray = new T[numberArray.Length];
+            for(int i=0;i<numberArray.Length;i++)
+            {
+                myArray[i] = property(numberArray[i]);
+
+            }
+            return myArray;
+
         }
     }
 }
