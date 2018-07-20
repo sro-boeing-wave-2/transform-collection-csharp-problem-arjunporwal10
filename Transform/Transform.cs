@@ -8,7 +8,7 @@ namespace Transform
     {
         public static T[] Map<T>(this int[] numberArray, Func<int , T> property)
         {
-            //throw new NotImplementedException();
+            //throw new NotImplementdException();
             T[] myArray = new T[numberArray.Length];
             for(int i=0;i<numberArray.Length;i++)
             {
